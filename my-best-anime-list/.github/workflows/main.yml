@@ -1,0 +1,39 @@
+name: Workflow for CI/CD on branch main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup nodejs v14
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+
+      - name: check node and npm versions
+        run: |
+          npm --version
+          node --version
+
+      - name: setup snyk and yarn
+        run: |
+          npm install -g snyk
+          npm install -g yarn
+          yarn --version
+
+      - name: auth on snyk
+        run: snyk auth $snyk_secret
+        env:
+          snyk_secret: ${{ secrets.SNYK_TOKEN }}
+
+      - name: install dependencies of application
+        run: yarn install --prod
+
+      - name: scan for vulnerabilities
+        run: yarn snyk
