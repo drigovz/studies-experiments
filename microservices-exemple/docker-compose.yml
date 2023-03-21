@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  catalogdb:
+    image: mongo
+    networks:
+      - microsservices-network
+
+  basketdb:
+    image: redis:alpine
+    networks:
+      - microsservices-network
+
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalog.api
+    build:
+      context: .
+      dockerfile: Catalog.API/Dockerfile
+    networks:
+      - microsservices-network
+
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Basket.API/Dockerfile
+    networks:
+      - microsservices-network
+
+volumes:
+  mongo_data:
+
+networks: 
+    microsservices-network:
+      driver: bridge

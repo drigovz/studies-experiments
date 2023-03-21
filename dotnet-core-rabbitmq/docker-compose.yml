@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-server
+    user: root
+    volumes:
+      - C:\containers\mssql:/var/opt/mssql/data
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ${SQL_PASSWORD}
+      MSSQL_PID: ${SQL_PID}
+    networks:
+      - dev-network
+
+  rabbitmq:
+    image: rabbitmq:3.9-management-alpine
+    container_name: rabbitmq
+    user: root
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - dev-network
+    volumes:
+      - C:\containers\rabbitmq\data:/var/lib/rabbitmq/
+      - C:\containers\rabbitmq\log:/var/log/rabbitmq
+    environment:
+        RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
+        RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+
+networks:
+  dev-network:
+    driver: bridge
