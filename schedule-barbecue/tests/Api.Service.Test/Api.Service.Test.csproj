@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+  <PackageReference Include="Faker.Net" Version="1.5.138" />
+    <PackageReference Include="Microsoft.TestPlatform.ObjectModel" Version="16.10.0" />
+    <PackageReference Include="moq" Version="4.16.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Api.Service\Api.Service.csproj" />
+    <ProjectReference Include="..\..\src\Api.Infra.CrossCutting\Api.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\..\src\Api.Domain\Api.Domain.csproj" />
+    <ProjectReference Include="..\Api.Infra.CrossCutting.Test\Api.Infra.CrossCutting.Test.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,45 @@
+name: Build and test application
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    env:
+      PATH_TEST_DOMAIN_PROJECT: ./tests/Api.Domain.Test/Api.Domain.Test.csproj
+      PATH_TEST_INFRA_CROSSCUTTING_PROJECT: ./tests/Api.Infra.CrossCutting.Test/Api.Infra.CrossCutting.Test.csproj
+      PATH_TEST_SERVICE_PROJECT: ./tests/Api.Service.Test/Api.Service.Test.csproj
+      PATH_TEST_APPLICATION_PROJECT: ./tests/Api.Application.Test/Api.Application.Test.csproj
+      PATH_TO_API: ./src/Api.Application/Api.Application.csproj
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup .NET Core 3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.410'
+
+      - name: Check .NET Core version 
+        run: dotnet --version
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build application
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run tests on Domain
+        run: dotnet test ${{ env.PATH_TEST_DOMAIN_PROJECT }} --verbosity minimal
+
+      - name: Run tests on Infra.CrossCutting
+        run: dotnet test ${{ env.PATH_TEST_INFRA_CROSSCUTTING_PROJECT }} --verbosity minimal
+
+      - name: Run tests on Service
+        run: dotnet test ${{ env.PATH_TEST_SERVICE_PROJECT }} --verbosity minimal
+
+      - name: Run tests on Application
+        run: dotnet test ${{ env.PATH_TEST_APPLICATION_PROJECT }} --verbosity minimal
