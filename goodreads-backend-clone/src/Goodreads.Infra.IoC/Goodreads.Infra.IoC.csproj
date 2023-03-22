@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Goodreads.Application\Goodreads.Application.csproj" />
+    <ProjectReference Include="..\Goodreads.Core\Goodreads.Core.csproj" />
+    <ProjectReference Include="..\Goodreads.Infra.Data\Goodreads.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

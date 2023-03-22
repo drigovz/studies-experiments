@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{176E6D5B-A1BA-43B2-9D89-5102D25587AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5A950BC9-B850-494C-8949-7B2CB80A9387}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodreads.Core", "src\Goodreads.Core\Goodreads.Core.csproj", "{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodreads.Application", "src\Goodreads.Application\Goodreads.Application.csproj", "{8717E771-42A4-4AB5-88AE-FA98DE9F9E37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodreads.Infra.Data", "src\Goodreads.Infra.Data\Goodreads.Infra.Data.csproj", "{CA1A9DD4-189A-466E-A00A-D2DAD20299F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goodreads.Infra.IoC", "src\Goodreads.Infra.IoC\Goodreads.Infra.IoC.csproj", "{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodreads.Api", "src\Goodreads.Api\Goodreads.Api.csproj", "{CD2FD7A2-59F5-43AA-B489-15776873C5DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodreads.Core.Test", "tests\Goodread.Core.Test\Goodreads.Core.Test.csproj", "{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{240C71FE-3C9C-422A-BDEC-E051CB5E370E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "worflows", "worflows", "{F35CAAA7-BFAA-4095-9BDC-FA0E7057308E}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yaml = .github\workflows\main.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodreads.Common.Test", "tests\Goodreads.Common.Test\Goodreads.Common.Test.csproj", "{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodreads.Infra.Data.Test", "tests\Goodreads.Infra.Data.Test\Goodreads.Infra.Data.Test.csproj", "{8779DFA8-41D4-486B-96AC-7BC850D4A00D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8717E771-42A4-4AB5-88AE-FA98DE9F9E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8717E771-42A4-4AB5-88AE-FA98DE9F9E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8717E771-42A4-4AB5-88AE-FA98DE9F9E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8717E771-42A4-4AB5-88AE-FA98DE9F9E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1A9DD4-189A-466E-A00A-D2DAD20299F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1A9DD4-189A-466E-A00A-D2DAD20299F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1A9DD4-189A-466E-A00A-D2DAD20299F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1A9DD4-189A-466E-A00A-D2DAD20299F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2FD7A2-59F5-43AA-B489-15776873C5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2FD7A2-59F5-43AA-B489-15776873C5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2FD7A2-59F5-43AA-B489-15776873C5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2FD7A2-59F5-43AA-B489-15776873C5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8779DFA8-41D4-486B-96AC-7BC850D4A00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8779DFA8-41D4-486B-96AC-7BC850D4A00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8779DFA8-41D4-486B-96AC-7BC850D4A00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8779DFA8-41D4-486B-96AC-7BC850D4A00D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CECE8F01-F8B8-4DD9-8D54-ECBD29C9BAD6} = {176E6D5B-A1BA-43B2-9D89-5102D25587AE}
+		{8717E771-42A4-4AB5-88AE-FA98DE9F9E37} = {176E6D5B-A1BA-43B2-9D89-5102D25587AE}
+		{CA1A9DD4-189A-466E-A00A-D2DAD20299F5} = {176E6D5B-A1BA-43B2-9D89-5102D25587AE}
+		{EF10B3C1-98ED-4C2D-895E-AA6EB4CE7271} = {176E6D5B-A1BA-43B2-9D89-5102D25587AE}
+		{CD2FD7A2-59F5-43AA-B489-15776873C5DB} = {176E6D5B-A1BA-43B2-9D89-5102D25587AE}
+		{B2636CA3-EE7E-4204-9078-ED0BF09A2BEB} = {5A950BC9-B850-494C-8949-7B2CB80A9387}
+		{F35CAAA7-BFAA-4095-9BDC-FA0E7057308E} = {240C71FE-3C9C-422A-BDEC-E051CB5E370E}
+		{04A0D4EE-B4F5-4DD9-975D-6D54D68B2A7A} = {5A950BC9-B850-494C-8949-7B2CB80A9387}
+		{8779DFA8-41D4-486B-96AC-7BC850D4A00D} = {5A950BC9-B850-494C-8949-7B2CB80A9387}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6F04218-F4C8-4B15-97A0-1F9915EE6533}
+	EndGlobalSection
+EndGlobal
