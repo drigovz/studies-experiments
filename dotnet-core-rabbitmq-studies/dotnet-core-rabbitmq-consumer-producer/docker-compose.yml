@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    user: root
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - C:\containers\mongodb:/data/db
+    networks:
+      - dev-network
+
+  rabbitmq:
+    image: rabbitmq:3.9.29-management-alpine
+    container_name: rabbitmq
+    user: root
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - C:\containers\rabbitmq\data:/var/lib/rabbitmq/
+      - C:\containers\rabbitmq\log:/var/log/rabbitmq
+    networks:
+      - dev-network
+    environment:
+        RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
+        RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+
+networks:
+  dev-network:
+    driver: bridge
