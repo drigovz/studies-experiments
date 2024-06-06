@@ -1,0 +1,12 @@
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.csproj.AssemblyReference.cache
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.AssemblyInfoInputs.cache
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.AssemblyInfo.cs
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.csproj.CoreCompileInputs.cache
+C:\dev\backend\AzureStorageQueue\StorageQueue\bin\Debug\net8.0\StorageQueue.Helper.deps.json
+C:\dev\backend\AzureStorageQueue\StorageQueue\bin\Debug\net8.0\StorageQueue.Helper.dll
+C:\dev\backend\AzureStorageQueue\StorageQueue\bin\Debug\net8.0\StorageQueue.Helper.pdb
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.Helper.dll
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\refint\StorageQueue.Helper.dll
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\StorageQueue.Helper.pdb
+C:\dev\backend\AzureStorageQueue\StorageQueue\obj\Debug\net8.0\ref\StorageQueue.Helper.dll
